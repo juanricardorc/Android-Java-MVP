@@ -1,5 +1,5 @@
 ## Nueva versión disponible escrita en Kotlin:
-[Clean Architecture, Android Kotlin](https://github.com/juanricardorc/Android-Kotlin-MVP)
+[MVP, Android Kotlin](https://github.com/juanricardorc/Android-Kotlin-MVP)
 
 Introducción
 -----------------
