@@ -23,6 +23,7 @@ public class LoginDatabaseDataSource implements LoginDataSource {
             userEntity.setName("John");
             userEntity.setLastName("Richard");
             userEntity.setJob("Software Engineer");
+            userEntity.setSource("Database");
             userEntity.setState(true);
             return userEntity;
         } else {
