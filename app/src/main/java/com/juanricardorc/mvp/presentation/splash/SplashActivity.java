@@ -1,4 +1,4 @@
-package com.juanricardorc.mvp.splash;
+package com.juanricardorc.mvp.presentation.splash;
 
 import android.os.Bundle;
 

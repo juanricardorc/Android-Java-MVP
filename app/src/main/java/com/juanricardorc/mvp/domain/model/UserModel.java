@@ -1,10 +1,11 @@
-package com.juanricardorc.mvp.data.model;
+package com.juanricardorc.mvp.domain.model;
 
 public class UserModel {
     private String id;
     private String name;
     private String lastName;
     private String job;
+    private String source;
     private boolean state;
 
     public UserModel() {
@@ -41,6 +42,14 @@ public class UserModel {
 
     public void setJob(String job) {
         this.job = job;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
     }
 
     public boolean isState() {

@@ -1,6 +1,7 @@
 package com.juanricardorc.mvp.data.source;
 
-import com.juanricardorc.mvp.data.model.UserModel;
+import com.juanricardorc.mvp.domain.entity.UserEntity;
+import com.juanricardorc.mvp.domain.response.UserResponse;
 
 public class LoginNetworkDataSource implements LoginDataSource {
 
@@ -15,17 +16,23 @@ public class LoginNetworkDataSource implements LoginDataSource {
     }
 
     @Override
-    public UserModel getUser(String id) {
+    public UserEntity getUserEntity(String id) {
+        return null;
+    }
+
+    @Override
+    public UserResponse getUserResponse(String id) {
         if (id.equalsIgnoreCase("78264321")) {
-            UserModel userModel = new UserModel();
-            userModel.setId("78264321");
-            userModel.setName("John Maxweell");
-            userModel.setLastName("Richard Sim");
-            userModel.setJob("Senior Software Engineer");
-            userModel.setState(true);
-            return userModel;
+            UserResponse userResponse = new UserResponse();
+            userResponse.setId("78264321");
+            userResponse.setName("John Maxweell");
+            userResponse.setLastName("Richard Sim");
+            userResponse.setJob("Senior Software Engineer");
+            userResponse.setSource("API Rest");
+            userResponse.setState(true);
+            return userResponse;
         } else {
-            return new UserModel();
+            return new UserResponse();
         }
     }
 }

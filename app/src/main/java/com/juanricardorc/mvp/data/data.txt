@@ -1,0 +1,11 @@
+
+
+    Paquete data:
+    ------------
+
+    En este paquete estan las clases de acceso a base de datos, API Rest, Memoria caché, etc.
+
+
+    NOTA: En realidad este paquete data debería ser un módulo, la cual administra el origen de
+    datos, solo a modo de prueba esta como paquete. Porque data es una capa base de
+    Clean Architecture.

@@ -1,0 +1,17 @@
+
+
+    Paquete domain:
+    --------------
+
+    En este paquete estan los modelos y entidades.
+    a) Los modelos son clases que llegan hasta el paquete de presentation.
+    b) Las entidades son clases que interactuan con el origen de datos, por ejemplo
+       para mapear request, response, entity(room), etc.
+
+    Entonces para realizar la transformación de datos existen los mappers, la cual reciben como
+    parametros las entidades y devuelven modelos.
+
+
+    NOTA: En realidad este paquete domain debería ser un módulo, la cual contiene los Casos de Uso,
+          Modelos, Entidades. Porque domain es una capa base de Clean Architecture, solo a modo de
+          prueba esta como paquete.

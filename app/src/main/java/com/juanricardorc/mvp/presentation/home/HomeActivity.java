@@ -1,4 +1,4 @@
-package com.juanricardorc.mvp.home;
+package com.juanricardorc.mvp.presentation.home;
 
 import android.os.Bundle;
 

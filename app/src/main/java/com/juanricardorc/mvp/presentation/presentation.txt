@@ -1,0 +1,19 @@
+
+
+    Hola Dev, como este es un ejemplo de como funciona el patrón de diseño MVP.
+    por ahora solo concentrate en el paquete de presentation.
+
+    Paquete presentation:
+    --------------------
+
+    En este paquete estan todas las activitys y fragments. Incluidos las
+    clases base, como por ejemplo: BaseActivity, BasePresenter, BaseView, etc. Como ejemplo esta
+    LoginActivity.
+
+
+    NOTA: Te preguntarás porque he creado paquetes llamados presentation, domain y data. Son
+    nombres en base a Clean Architecture, pero cada paquete debería ser un módulo, si aún estas
+    aprendiendo ignoralo por ahora y concentrate en el paquete presentation.
+
+
+

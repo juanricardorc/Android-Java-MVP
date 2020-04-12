@@ -1,7 +1,7 @@
-package com.juanricardorc.mvp.login;
+package com.juanricardorc.mvp.presentation.login;
 
-import com.juanricardorc.mvp.base.BasePresenter;
-import com.juanricardorc.mvp.data.model.UserModel;
+import com.juanricardorc.mvp.presentation.base.BasePresenter;
+import com.juanricardorc.mvp.domain.model.UserModel;
 import com.juanricardorc.mvp.data.repository.LoginRepository;
 
 

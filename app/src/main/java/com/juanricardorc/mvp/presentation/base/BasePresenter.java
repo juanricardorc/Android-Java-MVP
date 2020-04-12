@@ -1,4 +1,4 @@
-package com.juanricardorc.mvp.base;
+package com.juanricardorc.mvp.presentation.base;
 
 public abstract class BasePresenter<V extends BaseView> {
     protected V view;

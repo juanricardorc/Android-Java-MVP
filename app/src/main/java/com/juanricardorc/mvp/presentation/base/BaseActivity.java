@@ -1,4 +1,4 @@
-package com.juanricardorc.mvp.base;
+package com.juanricardorc.mvp.presentation.base;
 
 import android.os.Bundle;
 

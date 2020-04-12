@@ -1,4 +1,4 @@
-package com.juanricardorc.mvp.login;
+package com.juanricardorc.mvp.presentation.login;
 
 import android.content.Intent;
 import android.view.View;
@@ -9,26 +9,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.juanricardorc.mvp.R;
-import com.juanricardorc.mvp.base.BaseActivity;
-import com.juanricardorc.mvp.data.model.UserModel;
+import com.juanricardorc.mvp.presentation.base.BaseActivity;
+import com.juanricardorc.mvp.domain.model.UserModel;
 import com.juanricardorc.mvp.data.repository.LoginDataRepository;
 import com.juanricardorc.mvp.data.repository.LoginRepository;
 import com.juanricardorc.mvp.data.source.LoginDatabaseDataSource;
 import com.juanricardorc.mvp.data.source.LoginNetworkDataSource;
-import com.juanricardorc.mvp.home.HomeActivity;
-
-
-/*
-*
-* Hola Dev, si estas leyendo esto, es porque quieres entender el patrón de diseño
-* MVP (Modelo, Vista, Presentador).
-*
-* Te recomiendo que leas sobre clases abstractas e interfaces. Si ya tienes conceptos de
-* esos temas, puedes omitir esto y revisar las clases que he implementado.
-*
-* Si tienes alguna duda escribeme a mi email: ricardo.ramos@unas.edu.pe
-*
-* */
+import com.juanricardorc.mvp.presentation.home.HomeActivity;
 
 public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginView {
 
@@ -49,6 +36,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
         passwordEditText.setText("123456");
         loginButton = findViewById(R.id.loginButton);
     }
+
     @Override
     protected void events() {
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +80,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     @Override
     public void showUser(@NonNull UserModel user) {
         if (user.getName() != null && user.getJob() != null) {
-            Toast.makeText(getBaseContext(), user.getName() + " | " + user.getJob(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), user.getSource()+" | "+user.getName() + " | " + user.getJob(), Toast.LENGTH_SHORT).show();
             goHome();
         }
 

@@ -1,9 +1,12 @@
 package com.juanricardorc.mvp.data.source;
 
-import com.juanricardorc.mvp.data.model.UserModel;
+import com.juanricardorc.mvp.domain.entity.UserEntity;
+import com.juanricardorc.mvp.domain.response.UserResponse;
 
 public interface LoginDataSource {
     boolean validateUserNameAndPassword(String userName, String password);
 
-    UserModel getUser(String id);
+    UserEntity getUserEntity(String id);
+
+    UserResponse getUserResponse(String id);
 }

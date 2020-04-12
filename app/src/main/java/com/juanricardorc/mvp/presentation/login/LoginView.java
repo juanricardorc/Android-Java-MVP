@@ -1,9 +1,9 @@
-package com.juanricardorc.mvp.login;
+package com.juanricardorc.mvp.presentation.login;
 
 import androidx.annotation.NonNull;
 
-import com.juanricardorc.mvp.base.BaseView;
-import com.juanricardorc.mvp.data.model.UserModel;
+import com.juanricardorc.mvp.presentation.base.BaseView;
+import com.juanricardorc.mvp.domain.model.UserModel;
 
 public interface LoginView extends BaseView {
     void showError(String message);
