@@ -11,3 +11,6 @@ Para demostrar cómo diseñar y construir una aplicación basada en **Modelo Vis
 <p align="center">
   <img alt="https://www.themoviedb.org/" src="https://github.com/juanricardorc/Android-Java-MVP/blob/master/app/src/main/assets/images/Android-Developer-MVP.jpeg"/>
 </p>
+
+## También tengo una presentación en Medium, dale una revisada ;)
+[Domina el Patrón de Diseño: Modelo, Vista, Presentador (MVP) - Android](https://medium.com/@ricardo.ramos/domina-el-patr%C3%B3n-de-dise%C3%B1o-modelo-vista-presentador-mvp-android-d0d5ef419e7)
