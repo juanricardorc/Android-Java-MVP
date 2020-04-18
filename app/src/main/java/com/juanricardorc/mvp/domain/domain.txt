@@ -6,7 +6,7 @@
     En este paquete estan los modelos y entidades.
     a) Los modelos son clases que llegan hasta el paquete de presentation.
     b) Las entidades son clases que interactuan con el origen de datos, por ejemplo
-       para mapear request, response, entity(room), etc.
+       para mapear request, response, entity(representa una tabla dentro de la base de datos), etc.
 
     Entonces para realizar la transformación de datos existen los mappers, la cual reciben como
     parametros las entidades y devuelven modelos.

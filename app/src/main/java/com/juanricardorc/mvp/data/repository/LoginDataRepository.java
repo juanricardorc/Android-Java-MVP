@@ -10,6 +10,8 @@ import com.juanricardorc.mvp.data.source.LoginNetworkDataSource;
 import com.juanricardorc.mvp.data.utils.DataUtils;
 import com.juanricardorc.mvp.domain.response.UserResponse;
 
+import java.util.List;
+
 public class LoginDataRepository implements LoginRepository {
     private LoginDatabaseDataSource loginDatabaseDatasource;
     private LoginNetworkDataSource loginNetworkDataSource;
@@ -27,7 +29,7 @@ public class LoginDataRepository implements LoginRepository {
 
     @Override
     public boolean validateUserNameAndPassword(String userName, String password) {
-        if (DataUtils.isOnline(context)) {
+        if (loginNetworkDataSource.isOnline(context)) {
             return this.loginNetworkDataSource.validateUserNameAndPassword(userName, password);
         } else {
             return this.loginDatabaseDatasource.validateUserNameAndPassword(userName, password);
@@ -36,12 +38,17 @@ public class LoginDataRepository implements LoginRepository {
 
     @Override
     public UserModel getUser(String id) {
-        if (DataUtils.isOnline(context)) {
+        if (loginNetworkDataSource.isOnline(context)) {
             UserResponse userResponse = this.loginNetworkDataSource.getUserResponse(id);
             return this.loginMapper.transformResponse(userResponse);
         } else {
             UserEntity userEntity = this.loginDatabaseDatasource.getUserEntity(id);
             return this.loginMapper.transformEntity(userEntity);
         }
+    }
+
+    @Override
+    public List<UserModel> getUsers() {
+        return this.loginDatabaseDatasource.getUsers();
     }
 }

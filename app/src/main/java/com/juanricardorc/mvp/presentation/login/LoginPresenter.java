@@ -4,6 +4,8 @@ import com.juanricardorc.mvp.presentation.base.BasePresenter;
 import com.juanricardorc.mvp.domain.model.UserModel;
 import com.juanricardorc.mvp.data.repository.LoginRepository;
 
+import java.util.List;
+
 
 /*
  *
@@ -36,9 +38,14 @@ public class LoginPresenter extends BasePresenter<LoginView> {
         else view.showError("Usuario incorrecto");
     }
 
-    public void getUser(String id){
+    public void getUser(String id) {
         UserModel user = this.loginRepository.getUser(id);
         view.showUser(user);
+    }
+
+    public void getUsers() {
+        List<UserModel> users = this.loginRepository.getUsers();
+        view.showUsers(users);
     }
 
 }

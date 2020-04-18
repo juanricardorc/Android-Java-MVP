@@ -5,6 +5,8 @@ import androidx.annotation.NonNull;
 import com.juanricardorc.mvp.presentation.base.BaseView;
 import com.juanricardorc.mvp.domain.model.UserModel;
 
+import java.util.List;
+
 public interface LoginView extends BaseView {
     void showError(String message);
 
@@ -13,4 +15,6 @@ public interface LoginView extends BaseView {
     void showUser(@NonNull UserModel user);
 
     void goHome();
+
+    void showUsers(List<UserModel> users);
 }

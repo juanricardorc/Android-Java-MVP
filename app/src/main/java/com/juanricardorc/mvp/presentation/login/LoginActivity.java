@@ -17,6 +17,8 @@ import com.juanricardorc.mvp.data.source.LoginDatabaseDataSource;
 import com.juanricardorc.mvp.data.source.LoginNetworkDataSource;
 import com.juanricardorc.mvp.presentation.home.HomeActivity;
 
+import java.util.List;
+
 public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginView {
 
     private EditText userNameEditText;
@@ -90,5 +92,10 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     public void goHome() {
         Intent intent = new Intent(getBaseContext(), HomeActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void showUsers(List<UserModel> users) {
+
     }
 }
